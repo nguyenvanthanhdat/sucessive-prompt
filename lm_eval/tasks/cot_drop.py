@@ -59,7 +59,9 @@ class DROP(Task):
 
     def load_dataset(self):
         dataset_dict = {"train": [], "validation": []}
-        print(os.getcwd())
+        path = os.getcwd()
+        self.train_file = os.path.join(path, self.train_file)
+        self.validation_file = os.path.join(path, self.validation_file)
         dataset_dict["train"] = self.read_dataset(self.train_file)
         dataset_dict["validation"] = self.read_dataset(self.validation_file)
         return dataset_dict
