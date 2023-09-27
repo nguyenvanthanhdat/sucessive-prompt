@@ -27,6 +27,7 @@ import faiss
 import sys
 sys.path.insert(0, '<path_to_set_repo>')
 import sentence_transformers
+import os
 
 _ARTICLES = re.compile(r"\b(a|an|the)\b", re.UNICODE)
 
@@ -58,6 +59,7 @@ class DROP(Task):
 
     def load_dataset(self):
         dataset_dict = {"train": [], "validation": []}
+        print(os.getcwd())
         dataset_dict["train"] = self.read_dataset(self.train_file)
         dataset_dict["validation"] = self.read_dataset(self.validation_file)
         return dataset_dict
