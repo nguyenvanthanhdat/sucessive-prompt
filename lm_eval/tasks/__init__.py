@@ -126,8 +126,8 @@ TASK_REGISTRY = {
     "coqa": coqa.CoQA,
     "drop": drop.DROP,
     "cot_drop": cot_drop.DROP(
-        train_file = "lm_eval\cot-drop\drop_dataset_train.json",
-        validation_file = "lm_eval\cot-drop\drop_dataset_dev.json"),
+        train_file = "lm_eval/cot-drop/drop_dataset_train.json",
+        validation_file = "lm_eval/cot-drop/drop_dataset_dev.json"),
     "lambada_openai": lambada.LambadaOpenAI,
     "lambada_standard": lambada.LambadaStandard,
     "lambada_openai_cloze": lambada_cloze.LambadaOpenAICloze,
