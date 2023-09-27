@@ -69,6 +69,8 @@ from . import csatqa
 from . import haerae
 from . import cmmlu
 
+import os
+
 ########################################
 # Translation tasks
 ########################################
@@ -124,8 +126,8 @@ TASK_REGISTRY = {
     "coqa": coqa.CoQA,
     "drop": drop.DROP,
     "cot_drop": cot_drop.DROP(
-        train_file = "E:\Workspace\\test\succesive prompting\eluther_task\drop_dataset\\drop_dataset_train.json",
-        validation_file = "E:\Workspace\\test\succesive prompting\eluther_task\drop_dataset\\drop_dataset_dev.json"),
+        train_file = "lm_eval\cot-drop\drop_dataset_train.json",
+        validation_file = "lm_eval\cot-drop\drop_dataset_dev.json"),
     "lambada_openai": lambada.LambadaOpenAI,
     "lambada_standard": lambada.LambadaStandard,
     "lambada_openai_cloze": lambada_cloze.LambadaOpenAICloze,
